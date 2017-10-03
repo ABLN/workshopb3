@@ -18,7 +18,7 @@
     <div class="nav-wrapper">
         <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Index</span></a>
 
-      
+
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
@@ -32,51 +32,14 @@
             </ul>
             <script>$( document ).ready(function(){ $(".button-collapse").sideNav();})
                </script>
-      
+
 
     </div>
 </nav>
 
 
 <div class="container">
-    <div class="container">
-        <form action="{{ path("fos_user_security_check") }}" method="post">
-               <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="email" class="validate" required="required"  id="username" name="_username" />
-                    <label>Email :</label>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="password" id="password" name="_password" required="required" class="validate" required="required"/>
-                    <label for="password">Password</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="checkbox">
-                       <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                       <label for="remember_me">Remember me</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s6 offset-s4">
-
-                     <input class="btn waves-effect waves-light" type="submit" id="_submit" name="_submit" value="Login" />
-                </div>
-            </div>
-
-
-
-
-
-
-
-        </form>
-    </div>
+<!--Body here-->
 
 </div>
 
