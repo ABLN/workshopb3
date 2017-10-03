@@ -12,7 +12,19 @@
     <body>
          <nav class="black" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="orange-text text-darken-3"> Connection</span></a>
-          <i class="large material-icons">menu</i>
+
+          <div class="btn-floating vertical click-to-toggle">
+            <a class="brand-logo">
+              <i class="large material-icons">menu</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+              <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+              <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+              <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+          </div>
+
           <div class="fixed-action-btn vertical click-to-toggle">
             <a class="btn-floating btn-large red">
               <i class="material-icons">menu</i>
@@ -27,9 +39,9 @@
          </nav>
 
   <div class="container">
-        
+
             <form action="#" method="post"><br>
-        
+
       <div class="row">
         <div class="input-field col s8">
            <input id="compte" type="text" class="validate" required="required">
@@ -39,21 +51,21 @@
               <h6>@gfi.fr</h6>
         </div>
       </div>
-               
+
       <div class="row">
         <div class="input-field col s12">
           <input id="password" type="password" class="validate" required="required">
           <label for="password">Password</label>
         </div>
       </div>
-            
+
                 <div class="row">
                     <div class="col s6 offset-s4">
                         <input class="btn waves-effect waves-light" type="submit" name="connexion" value="To login"/>
                     </div>
                 </div>
-          
-               
+
+
       </form>
     </div>
 
