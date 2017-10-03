@@ -5,48 +5,247 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
     <!--Let browser know website is optimized for mobile-->
+    <style>
+    .addNeed {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 !important;
+    }
+
+    .colorBackGFI {
+        background-color: #2f354a !important;
+    }
+
+    .colorGFI {
+        color: #2f354a;
+    }
+
+    .ml10{
+      margin-left: 10px;
+    }
+
+    .nopadding {
+        padding:0 5px !important;
+    }
+
+    .filters {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .colorBackW {
+        background-color: #ffffff;
+    }
+
+    .noboxshadow {
+        box-shadow: 0 0 0 0;
+    }
+
+    .btn:hover{
+        box-shadow: 0 0 0 0 !important;
+        background-color: #2f354a;
+    }
+
+    .ml5{
+        margin-left: 5px !important;
+    }
+
+    .active{
+      color: #2f354a !important;
+    }
+
+    #autocomplete-input{
+      border-bottom: 1px solid #2f354a !important;
+      box-shadow: 0 0 0 0 !important;
+    }
+
+    .btn{
+      font-size: 12px !important;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        padding: 0px!important;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        max-height: 100% !important;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 50% auto; /* 15% from the top and centered */
+        padding:0px!important;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+    .modal-header {
+        padding: 2px 16px;
+        padding-top: 7px;
+        background-color: #2f354a !important;
+    }
+    .modal-body {
+        padding: 7px 34px;
+    }
+</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{% block title %}{% endblock %}</title>
+    <title>Needs</title>
 </head>
 <body>
 <!-- UserDropDown Structure -->
 
 
-<nav class="black">
+<nav class="colorBackGFI">
     <div class="nav-wrapper">
-        <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Index</span></a>
-
-
-            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
+       <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Needs</span></a>
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right">
+            <li> <a class="btn-floating btn-large colorBackGFI addNeed noboxshadow"><i class="material-icons orange-text">add</i></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-menu">
+            <li><h5 class="colorGFI ml10"> Jean TEST </h5></li>
             <li><a href="#" class="orange-text text-darken-3">Profile</a></li>
+            <li><a href="#" class="orange-text text-darken-3">Customers</a></li>
             <li><a href="#" class="orange-text text-darken-3">Logout</a></li>
         </ul>
-            <ul class="side-nav" id="mobile-menu">
-                <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
-                <li><a href="#" class="orange-text text-darken-3">Profile</a></li>
-                <li><a href="{{ path('fos_user_security_logout') }}" class="orange-text text-darken-3">Logout</a></li>
-            </ul>
-            <script>$( document ).ready(function(){ $(".button-collapse").sideNav();})
-               </script>
-
-
     </div>
 </nav>
 
 
 <div class="container">
-<!--Body here-->
+  <div class="center filters">
+    <button class="btn nopadding colorBackW orange-text noboxshadow" type="submit" name="status">Status
+      <i id="status" class="material-icons right ml5">arrow_drop_down</i>
+    </button>
+    <button class="btn nopadding colorBackW orange-text noboxshadow" type="submit" name="title">Title
+      <i id="title" class="material-icons right ml5">arrow_drop_down</i>
+    </button>
+    <button class="btn nopadding colorBackW orange-text noboxshadow" type="submit" name="date">Date
+      <i id="date" class="material-icons right ml5">arrow_drop_down</i>
+    </button>
+    <button class="btn nopadding colorBackW orange-text noboxshadow" type="submit" name="customer">Customer
+      <i id="customer" class="material-icons right ml5">arrow_drop_down</i>
+    </button>
+  </div>
 
+  <div class="row center">
+    <div class="input-field col s12">
+      <i class="material-icons prefix colorGFI">search</i>
+      <input type="text" id="autocomplete-input" class="autocomplete colorGFI">
+      <label class="colorGFI" for="autocomplete-input">Search</label>
+    </div>
+  </div>
+
+   <ul class="collection">
+      <li class="collection-item avatar">
+        <i class="circle green"></i>
+        <B>My first need</B>
+        <p>GOOGLE <br>
+        10/01/2017
+        </p>
+        <a id="delete_1" need="1" class="secondary-content"><i class="material-icons colorGFI">delete</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="circle orange"></i>
+        <B>My second need</B>
+        <p>APPLE <br>
+        25/04/2017
+        </p>
+        <a id="delete_2" need="2" class="secondary-content"><i class="material-icons colorGFI">delete</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="circle red"></i>
+        <B>My third need</B>
+        <p>AMAZON <br>
+        08/08/2017
+        </p>
+        <a id="delete_3" need="3" class="secondary-content"><i class="material-icons colorGFI">delete</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="circle green"></i>
+        <B>An other need</B>
+        <p>MICROSOFT <br>
+        15/02/2017
+        </p>
+        <a id="delete_4" need="4" class="secondary-content"><i class="material-icons colorGFI">delete</i></a>
+      </li>
+    </ul>
+
+  <div id="modalSuppr" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="orange-text center">Delete a need</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this need (need <span id="todelete"></span>)?</p>
+        <div class="center filters">
+          <button class="btn nopadding colorBackW orange-text noboxshadow" id="no">No</button>
+          <button class="btn nopadding colorBackW orange-text noboxshadow" id="yes">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
 <script type="text/javascript" src="http://materializecss.com/js/init.js"></script>
+
+<script>
+  $(document).ready(function(){ $(".button-collapse").sideNav();})
+</script>
+<script>
+  $(document).ready(function(){
+
+    $("[id^='delete_']").click(function(){
+      var need = $(this).attr('need');
+      $("#todelete").html(need);
+      $('#modalSuppr').css("display","block");
+    });
+
+    $("#no").click(function(){
+      $('#modalSuppr').css("display","none");
+    });
+
+    $("#yes").click(function(){
+      $('#modalSuppr').css("display","none");
+    });
+
+    $(".btn").click(function(){
+      var filtre = $(this).attr('name');
+      if(filtre == "status" || filtre == "title" || filtre == "date" || filtre == "customer"){
+        var tri = $(this).children('i').html();
+
+        $('.btn').removeClass("colorBackGFI");
+
+        if(filtre != "status") { $('#status').html("arrow_drop_down"); }
+        if(filtre != "title") { $('#title').html("arrow_drop_down"); }
+        if(filtre != "date") { $('#date').html("arrow_drop_down"); }
+        if(filtre != "customer") { $('#customer').html("arrow_drop_down"); }
+
+        if(tri == "arrow_drop_up"){
+          tri = "arrow_drop_down";
+        } else {
+          tri = "arrow_drop_up";
+        }
+        $(this).addClass('colorBackGFI');
+        $(this).children('i').html(tri);
+      }
+    });
+
+  });
+</script>
 </body>
+
 </html>
