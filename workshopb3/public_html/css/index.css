@@ -18,6 +18,10 @@ and open the template in the editor.
     background-color: #2f354a;
 }
 
+.colornavc {
+    color: #2f354a;
+}
+
 .nopadding {
     padding:0 5px !important;
 }
@@ -38,4 +42,8 @@ and open the template in the editor.
 .btn:hover{
     box-shadow: 0 0 0 0 !important;
     background-color: #2f354a;
+}
+
+.marginstatus{
+    margin-left: 5px !important;
 }
