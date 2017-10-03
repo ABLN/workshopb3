@@ -5,6 +5,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    
+    <link type="text/css" rel="stylesheet" href="css/index.css"  media="screen,projection"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,28 +16,86 @@
 <!-- UserDropDown Structure -->
 
 
-<nav class="black">
+<nav class="colornavbar">
     <div class="nav-wrapper">
-        <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Index</span></a>
-
-
-            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
-            <li><a href="#" class="orange-text text-darken-3">Profile</a></li>
-            <li><a href="#" class="orange-text text-darken-3">Logout</a></li>
+        <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Index</span></a>  
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons orange-text">menu</i></a>
+        <ul id="nav-mobile" class="right">
+            <li> <a class="btn-floating btn-large waves-effect waves-light colornavbar button"><i class="material-icons orange-text">add</i></a>
+            </li>
         </ul>
             <ul class="side-nav" id="mobile-menu">
-                <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
+                <li><a href="" class="orange-text text-darken-3">Hello Jean </a></li>
                 <li><a href="#" class="orange-text text-darken-3">Profile</a></li>
                 <li><a href="{{ path('fos_user_security_logout') }}" class="orange-text text-darken-3">Logout</a></li>
             </ul>
-            <script>$( document ).ready(function(){ $(".button-collapse").sideNav();})
+            <script>$( document ).ready(function(){ $(".button-collapse").sideNav();});
                </script>
-
-
     </div>
 </nav>
+
+<div class="center margintop">
+    <button class="btn waves-effect waves-light nopadding colornavbar1 orange-text boxshadow" type="submit" name="action">Statut
+        <i class="material-icons right">arrow_drop_down</i>
+    </button>
+    <button class="btn waves-effect waves-light nopadding colornavbar1 orange-text boxshadow" type="submit" name="action">Titre
+        <i class="material-icons right">arrow_drop_down</i>
+    </button>
+<button class="btn waves-effect waves-light nopadding colornavbar1 orange-text boxshadow" type="submit" name="action">Date
+    <i class="material-icons right">arrow_drop_down</i>
+  </button>
+<button class="btn waves-effect waves-light nopadding colornavbar1 orange-text boxshadow" type="submit" name="action">Client
+    <i class="material-icons right">arrow_drop_down</i>
+  </button>
+</div>
+
+<div class="row">
+    <div class="center">
+      <div class="row">
+        <div class="input-field col s12 orange-text">
+          <i class="material-icons prefix">search</i>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Search</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>CUSTOMER <br>
+         Date 10/01/2017
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title">Title</span>
+      <p>CUSTOMER <br>
+         Date 10/01/2017
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title">Title</span>
+      <p>CUSTOMER <br>
+         Date 10/01/2017
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">play_arrow</i>
+      <span class="title">Title</span>
+      <p>CUSTOMER <br>
+         Date 10/01/2017
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+    </li>
+  </ul>
+
 
 
 <div class="container">
