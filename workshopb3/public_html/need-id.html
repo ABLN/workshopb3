@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet" href="css/custom.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="grey lighten-4">
+<!-- UserDropDown Structure -->
+
+
+<nav class="colorBackGFI">
+    <div class="nav-wrapper">
+        <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Need ID</span></a>
+        <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right">
+            <li> <a class="btn-floating btn-large colorBackGFI addNeed noboxshadow"><i class="material-icons orange-text">edit</i></a></li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
+            <li><a href="#" class="orange-text text-darken-3">Profile</a></li>
+            <li><a href="#" class="orange-text text-darken-3">Logout</a></li>
+
+        </ul>
+            <ul class="side-nav" id="mobile-menu">
+                <li><span class="orange-text text-darken-3"></span>Hello Jean </li>
+                <li><a href="#" class="orange-text text-darken-3">Profile</a></li>
+                <li><a href="#" class="orange-text text-darken-3">Customers</a></li>
+                <li><a href="{{ path('fos_user_security_logout') }}" class="orange-text text-darken-3">Logout</a></li>
+                <li><img src="logo/gfi-logo.jpg" class="circle black" style="width:90%;"></li>
+            </ul>
+            <script>$( document ).ready(function(){ $(".button-collapse").sideNav();})
+               </script>
+
+
+    </div>
+</nav>
+
+
+<div class="container">
+  <ul class="collapsible" data-collapsible="expandable">
+    <li>
+      <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">work</i>Customer<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+          <i class="material-icons">keyboard_arrow_down</i></div></div>
+        <div class="collapsible-body grey lighten-4" style="padding:0 0 0 1em;">
+          <ul class="collapsible" data-collapsible="expandable">
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">date_range</i>Date<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">person</i>Client<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">contacts</i>Contact name<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4">
+                <ul class="collection">
+                  <li class="collection-item avatar">
+                    <img src="logo/xavier.png" alt="" class="circle">
+                    <span class="title">Directeur National du Réseau EPSI</span>
+                    <p>Xavier TOSTIVINT <br>
+                      xavier.tostivint@campus-cd.com
+                    </p>
+                  </li>
+                  <li class="collection-item avatar">
+                    <img src="logo/alexandrine.png" alt="" class="circle">
+                    <span class="title">Directrice de campus</span>
+                    <p>Alexandrine GROHS <br>
+                      alexandrine.grohs@nantes-epsi.fr
+                    </p>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </li>
+    <li>
+      <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">format_align_justify</i>Need<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+          <i class="material-icons">keyboard_arrow_down</i></div></div>
+        <div class="collapsible-body grey lighten-4" style="padding:0 0 0 1em;">
+          <ul class="collapsible" data-collapsible="expandable">
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">subject</i>Title<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">description</i>Full description<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">assignment_turned_in</i>3 main key success factors<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">watch_later</i>Duration<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">timer</i>Start at the latest<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">gps_fixed</i>Location<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">attach_money</i>Rate<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header" style="position:relative;">
+                <i class="material-icons">folder</i>Description file<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+                  <i class="material-icons">keyboard_arrow_down</i></div></div>
+              <div class="collapsible-body grey lighten-4"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header" style="position:relative;">
+          <i class="material-icons">face</i>Consultants name<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+            <i class="material-icons">keyboard_arrow_down</i></div></div>
+        <div class="collapsible-body grey lighten-4">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <i class="material-icons circle">assignment_ind</i>
+              <span class="title">Pierre</span>
+              <p>STROBEL <br>
+                + 33 6 87 25 40 32
+              </p>
+              <ul>
+                <div class="chip">SYMPHONY</div>
+                <div class="chip">CSS</div>
+              </ul>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle yellow">assignment_ind</i>
+              <span class="title">Maxime</span>
+              <p>LEBAIL <br>
+                 + 33 6 85 33 60 29
+              </p>
+              <ul>
+                <div class="chip">SHAREPOINT</div>
+                <div class="chip">MANAGER</div>
+              </ul>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle green">assignment_ind</i>
+              <span class="title">Joan</span>
+              <p>GABORIT<br>
+                 + 33 6 59 99 11 78
+              </p>
+              <ul>
+                <div class="chip">WINDOWS SERVER</div>
+                <div class="chip">CSS</div>
+              </ul>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle red">assignment_ind</i>
+              <span class="title">Alexis</span>
+              <p>BILLON<br>
+                 + 33 6 30 01 18 68
+              </p>
+              <ul>
+                <div class="chip">C#</div>
+                <div class="chip">Linux Centos</div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header active" style="position:relative;">
+          <i class="material-icons">remove_red_eye</i>Status<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+            <i class="material-icons">keyboard_arrow_down</i></div></div>
+        <div class="collapsible-body grey lighten-4">
+          <ul>
+            <div class="chip">OPEN</div>
+            <div class="chip" style="color:green;">WIN</div>
+            <div class="chip" style="color:red;">LOST</div>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+</div>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="http://materializecss.com/js/init.js"></script>
+<script>
+$(".collapsible-header").click(function(){
+              var chevron = $(this).children('div').children('i').html();
+              if(chevron == "keyboard_arrow_down"){
+                  chevron = "keyboard_arrow_up";
+              } else {
+                  chevron = "keyboard_arrow_down";
+              }
+              $(this).children('div').children('i').html(chevron);
+          });
+</script>
+</body>
+</html>
