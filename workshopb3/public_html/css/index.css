@@ -51,3 +51,11 @@ and open the template in the editor.
 .margintopsave {
     margin-top: 100px;
 }
+
+.margintopbetween {
+    margin-top: 20px;
+}
+
+.margintopbetween1 {
+    margin-top: -10px;
+}
