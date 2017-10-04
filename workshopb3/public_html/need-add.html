@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    
+    <link type="text/css" rel="stylesheet" href="css/index.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<!-- UserDropDown Structure -->
+
+
+<nav class="colornavbar">
+    <div class="nav-wrapper">
+        <a id="logo-container" href="#" class="brand-logo center"><span class="orange-text text-darken-3">Jean Test</span></a>  
+            <script>$( document ).ready(function(){ $(".button-collapse").sideNav();});
+               </script>
+    </div>
+</nav>
+
+
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">date_range</i>Date<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <input placeholder="Date" type="text" class="datepicker" disabled>
+        </div>
+          
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">person</i>Customer<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+           <input placeholder="Customer" type="text" id="autocomplete-input" class="autocomplete">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">contacts</i>Contact Name<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <input placeholder="Contact Name" type="text">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">subject</i>Title<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <input placeholder="Title" id="input_text" type="text" data-length="80">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">description</i>Full Description<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>      
+        <div class="input-field col s12">
+          <textarea placeholder="Full Description" id="textarea1" class="materialize-textarea"></textarea>
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">assignment_turned_in</i>Main key success factors<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <textarea placeholder="Main key success factors" id="textarea3" class="materialize-textarea"></textarea>
+        </div>
+          <div class="input-field col s12">
+          <textarea placeholder="Main key success factors" id="textarea4" class="materialize-textarea"></textarea>
+        </div>
+          <div class="input-field col s12">
+          <textarea placeholder="Main key success factors" id="textarea5" class="materialize-textarea"></textarea>
+        </div>
+            
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">watch_later</i>Start at the latest<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <input placeholder="Date" type="text" class="datepicker">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">timer</i>Duration (months)<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s6">
+           <input placeholder="Duration (months)" type="number">
+        </div>  
+          
+          
+        <div class="input-field col s6">
+           <input placeholder="Days/Week" type="number">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">gps_fixed</i>Location<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <input placeholder="Location" type="text">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">attach_money</i>Rate (HT)<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+           <input placeholder="Rate (HT)" type="number">
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">folder</i>Description file<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="file-field input-field">
+            <div class="btn colornavbar orange-text">
+                <span>File</span>
+                <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+            </div>
+        </div>
+          
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">face</i>Consultants Name<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s12">
+          <textarea placeholder="Consultants Name" id="textarea6" class="materialize-textarea"></textarea>
+        </div>
+          <div class="input-field col s12">
+          <textarea placeholder="Consultants Name" id="textarea7" class="materialize-textarea"></textarea>
+        </div>
+          <div class="input-field col s12">
+          <textarea placeholder="Consultants Name" id="textarea8" class="materialize-textarea"></textarea>
+          </div>
+          <div class="input-field col s12">
+          <textarea placeholder="Consultants Name" id="textarea9" class="materialize-textarea"></textarea>
+        </div>
+        <div class="input-field col s12">
+          <textarea placeholder="Consultants Name" id="textarea10" class="materialize-textarea"></textarea>
+        </div>
+         
+    <div class="collapsible-header" style="position:relative;">
+        <i class="material-icons">face</i>Status<div style="position:absolute;right:0;top: calc( 50% - 22px / 2 );">
+        </div></div>
+        <div class="input-field col s4">
+          <input class="with-gap" name="group1" type="radio" id="test1" checked/>
+          <label for="test1">Open</label>
+        </div>
+        <div class="input-field col s4">
+          <input class="with-gap" name="group1" type="radio" id="test2"  />
+          <label for="test2">Win</label>
+        </div>
+          <div class="input-field col s4">
+          <input class="with-gap" name="group1" type="radio" id="test3"  />
+          <label for="test3">Lost</label>
+        </div>
+          
+        <div class="margintopsave">
+        <button class="btn waves-effect waves-light colornavbar orange-text" type="submit" name="action">Save & Share
+            <i class="material-icons right">cloud_upload</i>
+        </button>
+        </div>
+        
+
+<div class="container">
+<!--Body here-->
+</div>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="http://materializecss.com/js/init.js"></script>
+</body>
+</html>
